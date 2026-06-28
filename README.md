@@ -1,20 +1,32 @@
 # marketing-copy
 
-A Claude Code skill for generating marketing copy using 63 named rhetorical and persuasion techniques.
+An agentic skill for generating marketing copy using 63 named rhetorical and persuasion techniques. Follows the [Skills Directory](https://www.skillsdirectory.com/docs/skill-md-format) standard format.
 
 ## Install
 
-Copy the `marketing-copywriting/` folder into your project's `.claude/skills/` directory (or wherever your Claude Code skills live), then restart Claude Code.
+**Global** (available across all projects):
+
+```
+~/.claude/skills/marketing-copywriting/
+~/.opencode/skills/marketing-copywriting/
+```
+
+**Project-specific:**
+
+```
+.claude/skills/marketing-copywriting/
+.opencode/skills/marketing-copywriting/
+```
+
+Copy the `marketing-copywriting/` folder into the appropriate directory for your agent.
 
 ## Usage
 
-Invoke the skill from any Claude Code session:
+Invoke conversationally:
 
-```
-/marketing-copywriting Write 3 headline options for a pizza restaurant. Tone: bold and fun.
-```
+> "Use the marketing-copywriting skill to write 3 headline options for a pizza restaurant. Tone: bold and fun."
 
-Or just describe what you need — Claude will trigger the skill automatically when you ask for headlines, taglines, CTAs, social captions, email subject lines, or landing page copy.
+Or just describe what you need — the skill triggers automatically when you ask for headlines, taglines, CTAs, social captions, email subject lines, or landing page copy.
 
 ## Contents
 
