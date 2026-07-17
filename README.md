@@ -1,8 +1,12 @@
 # Marketing Copywriting
 
-An agent-agnostic skill for creating, improving, and critiquing marketing copy with 63 named rhetorical and persuasion techniques. Instead of producing generic variants, it recommends techniques that fit the copy goal or submitted copy, explains why they fit, and gives labeled examples.
+![Marketing Copywriting skill](marketing-copywriting-skill.png)
 
-Use it for headlines, taglines, CTAs, ads, email subject lines, social captions, and landing-page copy.
+## 😐 Generic prompt in. Generic copy out.🙄 
+
+Marketing Copywriting gives any AI agent 63 named rhetorical and persuasion techniques to turn a copy goal—or a weak draft—into a deliberate direction. It recommends the technique that fits, explains why, and returns labeled options you can actually choose between.
+
+Use it to create or improve headlines, taglines, CTAs, ads, email subject lines, social captions, and landing-page copy—without settling for another vague rewrite.
 
 ## What it does
 
