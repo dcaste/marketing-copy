@@ -1,120 +1,71 @@
 ---
 name: marketing-copywriting
-description: Generate marketing copy (headlines, taglines, CTAs, social captions, email subject lines, landing pages) using 63 named rhetorical and persuasion techniques.
-version: 1.0.0
+description: Recommend and apply named rhetorical and persuasion techniques to create, improve, critique, or brainstorm marketing copy.
+version: 1.1.0
 author: dcaste
 tags: [copywriting, marketing, advertising, headlines, persuasion]
 ---
 
 # Marketing Copywriting
 
-## Overview
+Use this skill to turn a copy brief into deliberate, explainable marketing copy. It recommends techniques before writing so users can choose a direction rather than receive generic variants.
 
-A skill for generating marketing copy by deliberately applying named rhetorical and persuasion techniques, instead of writing generic copy from scratch. The full technique library lives in `references/copywriting-techniques.md`.
+The technique library is `references/copywriting-techniques.md`.
 
-Generic copy ("Great food, great prices!") blends into the noise. Copy built on a named technique has a specific cognitive mechanism behind it — sound patterns, contrast, loss aversion, pattern-breaking — that makes it more memorable and persuasive.
+## When to use
 
-## When to Use
+Use this skill for new copy, submitted-copy critiques or rewrites, brainstorming, and requests to choose a copywriting technique. It covers headlines, taglines, slogans, ads, CTAs, email subject lines, social captions, and landing-page copy.
 
-Trigger this skill when the user asks to:
+## Workflow
 
-- Write, punch up, brainstorm, or get ideas for any marketing or advertising copy
-- Generate headlines, taglines, slogans, ad hooks, CTAs, social captions, email subject lines, or landing page copy
-- Improve or critique existing copy
-- Apply a specific tone (witty, bold, no-nonsense, playful) to a piece of copy
-- Understand why existing copy isn't working or compare technique options
+1. **Read the copy brief.** A goal or an existing line alone is enough. Product, audience, channel, tone, output type, and funnel stage are useful but optional.
+   - State any assumption that affects the response, then ask one short question that would improve the next iteration.
+   - Do not block on ordinary missing context. Pause before writing only when missing information would materially affect accuracy or safety—for example, a regulated claim, an unknown product, or an unverified comparative claim.
+   - If the user says `Direct mode` or `Just the copy`, honor the requested technique, format, count, and tone with minimal explanation.
+2. **Diagnose submitted copy.** When existing copy is supplied, briefly say what it communicates, what limits it for the stated goal, and whether it should be refined or replaced.
+3. **Select techniques deliberately.** Read the Quick Reference Table and Usage Guide in `references/copywriting-techniques.md`, then shortlist 3–6 suitable techniques. Read the entries only for the techniques you select.
+   - Recommend each technique with a short reason and its best use.
+   - If the user names a technique, recommend it concisely and use its entry directly.
+   - Avoid Pun, Self-Deprecation, and Chuck Norris for medical, legal, or financial businesses. Flag conditions for high-risk techniques (Anomaly, Bash Competitors, Shock Headlines) instead of silently omitting them.
+4. **Write the requested number of copy options.** The requested count is the total number of options, not the number per technique. Distribute options across the best-fit techniques. Default to three options when no count is requested.
+5. **Keep each option focused.** Use no more than one or two techniques in one piece of copy. For long-form assets, use Group D/E for structure and reserve Group A/B for headlines.
 
-## Instructions
+## Response format
 
-1. **Gather the brief.** Before writing, make sure you know (ask only what's missing and only if it would clearly change the output):
-   - The product/business and industry.
-   - The specific output needed: headline, tagline, full ad, CTA, email subject line, social caption, landing page copy, etc.
-   - The channel (print, social, email, OOH, landing page) — this affects which techniques are usable (Typographic Simile and Text Highlights only work visually).
-   - The brand tone, if discoverable from context (playful, premium, no-nonsense, irreverent, corporate). If unknown and it would change technique selection, ask once.
-   - The funnel stage / goal: attention (awareness), decision (conversion), or voice (retention/branding).
+Use this order, omitting sections that do not apply:
 
-2. **Select techniques deliberately.** Open `references/copywriting-techniques.md` and use the Quick Reference Table (one-line rule per technique) and Usage Guide (funnel stage / channel / risk) at the top of the file to shortlist 3–6 techniques that fit the brief. Avoid Pun, Self-Deprecation, or Chuck Norris for medical/legal/financial businesses; flag risk before using Shock Headlines or Bash Competitors.
+```md
+**Assumptions**
+[Only assumptions that affect the response, plus one useful clarifying question.]
 
-3. **Write 2–3 variants per chosen technique**, not one. Range from safe to bold so the user has real choices, not near-duplicates.
+**Copy diagnosis**
+[Only when copy was supplied: what it communicates, what limits it, and refine vs. replace.]
 
-4. **Apply combination rules:** max 1–2 techniques per single piece of copy; don't stack three rhetorical devices into one line.
+**Technique recommendations**
+- **[Technique]** — [why it fits]. Best for: [case].
+- **[Technique]** — [why it fits]. Best for: [case].
 
-5. **Flag risk, don't silently skip it.** If a technique is tagged "high risk" in the Usage Guide (Anomaly, Bash Competitors, Shock Headlines), still offer it if it's a genuine fit — but note the condition to verify (e.g., "this Anomaly claim only works if you can actually prove it's the only X in the area").
+**Copy options**
+1. "[Copy]" ([Technique])
+2. "[Copy]" ([Technique])
+3. "[Copy]" ([Technique])
 
-### Reading the reference file
-
-Read in two passes, not all at once:
-
-1. **Selection pass:** read the Quick Reference Table and Usage Guide (top of file) to shortlist techniques.
-2. **Writing pass:** read only the chosen technique's entry for its construction rule and examples.
-
-The library is organized in five groups — use the Table of Contents to jump:
-- **A. Sound & Rhythm** — best for short headlines and naming.
-- **B. Meaning & Contrast** — best for clever, idea-driven headlines.
-- **C. Tone & Brand Personality** — best for brand voice and social content.
-- **D. Persuasion Structures** — best for full ads, landing pages, and email.
-- **E. Positioning, Pain & Competition** — best for conversion-focused copy.
-
-## Output Format
-
-Always label every line with its technique in parentheses — without the label the user has no way to learn or ask for "more like #3."
-
-Default structure:
-
-```
-**[Technique name]**
-1. [variant] (Technique name)
-2. [variant] (Technique name)
-3. [variant] (Technique name)
-
-**[Technique name]**
-1. [variant] (Technique name)
-...
+**Next step**
+[One brief suggestion for testing or refining the direction.]
 ```
 
-For a single requested line, label inline: `"Small shop, big results." (Antithesis)`.
+In direct mode, retain a one-line recommendation and the labeled options; omit diagnosis, assumptions, and next-step advice unless necessary or requested.
 
 ## Examples
 
-**Input:** "Write 3 headline options for a barbershop targeting busy professionals. Tone: no-nonsense."
+**Goal-only brief:** “Get more demo bookings for a payroll app.”
 
-**Output:**
+Recommend conversion techniques, state any assumptions about audience or channel, then produce three labeled options.
 
-**Asyndeton**
-1. "In. Cut. Out." (Asyndeton)
-2. "Book. Sit. Done." (Asyndeton)
-3. "No wait. No fuss. No problem." (Asyndeton)
+**Submitted copy:** “We make accounting easy.”
 
-**Antithesis**
-1. "Less time in the chair, more time ahead." (Antithesis)
-2. "Your schedule is tight. Your cut shouldn't be." (Antithesis)
-3. "Fast chair. Sharp look." (Antithesis)
+Diagnose the vague promise, recommend a more specific technique, then provide rewrites.
 
-**Time to Value**
-1. "Fresh cut in 30 minutes. Guaranteed." (Time to Value)
-2. "Walk in at 7. Back at your desk by 8." (Time to Value)
-3. "Done before your first meeting." (Time to Value)
+**Named technique:** “Direct mode: give me three Antithesis headlines for a gym.”
 
----
-
-**Input:** "Improve this line for my auto shop: 'We fix cars fast and well.'"
-
-**Output:**
-
-The existing line attempts Parallelism but breaks the structure ("fast" and "well" aren't parallel). Stronger options:
-
-**Parallelism**
-1. "Fast repairs. Fair prices. First time, every time." (Parallelism)
-2. "We fix it right. We fix it fast." (Parallelism)
-3. "In by 8. Fixed by noon. Out by lunch." (Parallelism)
-
-**Asyndeton**
-1. "Diagnose. Fix. Done." (Asyndeton)
-2. "Drop it off. Pick it up. Problem solved." (Asyndeton)
-
-## Notes
-
-- **User names a technique directly** ("give me a Chuck Norris line for my gym"): skip selection, go straight to that technique's entry in the reference file and write variants.
-- **User wants to improve existing copy**: identify which technique the existing line is weakly attempting, then either sharpen it within that technique's rules or replace it with a better-fitting one.
-- **Sensitive industries** (medical, legal, financial advice, safety-related): default to lower-risk techniques (Groups A, B, D); avoid Group C/E techniques that rely on irony, self-deprecation, or confrontation unless the user explicitly asks.
-- **Long-form assets** (landing page, full email): use Group D/E techniques for structure; reserve Group A/B for the headline only — don't pepper rhetorical wordplay through body copy.
+Briefly confirm Antithesis as the recommendation, then provide exactly three labeled headlines.
