@@ -22,6 +22,17 @@ A goal alone or an existing line alone is enough to begin. The skill does not bl
 
 ## Install
 
+### ChatGPT and Claude
+
+1. Open the [latest release](https://github.com/dcaste/marketing-copy/releases/latest) and download **Source code (zip)**.
+2. Extract the download and locate the `marketing-copywriting/` folder. Keep its `references/` folder inside it.
+3. Upload that folder as a skill:
+   - **ChatGPT:** Open **Skills**, select **+**, then choose **Upload from your computer**.
+   - **Claude:** Open **Settings** → **Skills**, select **Add**, then upload the folder.
+4. Start a chat and ask for copy as usual—for example: “Write three homepage headlines for a payroll app for small businesses.”
+
+### Coding agents
+
 Copy the `marketing-copywriting/` directory, including `references/`, into your agent's skills directory. The directory is self-contained and uses relative references, so its instructions are not tied to one agent.
 
 | Agent | Project install location |
