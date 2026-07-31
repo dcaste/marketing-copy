@@ -2,7 +2,7 @@
 
 ![Marketing Copywriting skill](marketing-copywriting-skill.png)
 
-## 😐 Generic prompt in. Generic copy out.🙄 
+## 😐 Your AI isn't bad at copywriting. It's missing a persuasion framework.🙄
 
 Marketing Copywriting gives any AI agent 63 named rhetorical and persuasion techniques to turn a copy goal—or a weak draft—into a deliberate direction. It recommends the technique that fits, explains why, and returns labeled options you can actually choose between.
 
