@@ -8,15 +8,19 @@ Marketing Copywriting gives any AI agent 63 named rhetorical and persuasion tech
 
 Use it to create or improve headlines, taglines, CTAs, ads, email subject lines, social captions, and landing-page copy—without settling for another vague rewrite.
 
+**This skill only runs when you ask for it by name** — it never fires on its own in Claude Code, via the `disable-model-invocation` setting. Other agents may not honor that setting; if yours doesn't, name the skill explicitly anyway (see [How to use it](#how-to-use-it)) to get this behavior.
+
 ## What it does
 
 Given a goal, existing copy, or both, the skill:
 
-1. identifies assumptions and asks one useful follow-up when context is missing;
+1. states its assumptions and asks one useful follow-up when context is missing;
 2. diagnoses submitted copy before rewriting it;
-3. recommends suitable techniques and when to use each;
-4. writes the requested number of labeled copy options; and
+3. recommends techniques that fit the copy's funnel stage and channel, and explains why;
+4. writes the requested number of labeled copy options, checking each one actually delivers on its named technique before showing it; and
 5. suggests a next refinement or test.
+
+Ask it to change or expand on an option later, and it keeps using the same technique unless you ask otherwise — no unannounced switching.
 
 A goal alone or an existing line alone is enough to begin. The skill does not block on ordinary missing context; it states its assumptions and generates a useful first direction. It pauses only when missing information could make a claim inaccurate or unsafe.
 
@@ -36,7 +40,7 @@ Restart or reload your agent after installing. If an agent uses a different conf
 
 ## How to use it
 
-Ask naturally, or invoke the skill through your agent's native skill command. Include any details you have: goal, product, audience, channel, tone, output type, or existing copy. None are required.
+The skill is set to invoke-only, so in Claude Code your agent won't reach for it on its own, even if your prompt is about marketing copy. Name it explicitly — through your agent's native skill command (e.g. `/marketing-copywriting` in Claude Code), or by asking in plain language ("use the marketing-copywriting skill to..."). On other agents, name it explicitly the same way regardless of whether it would otherwise auto-trigger. Then include any details you have: goal, product, audience, channel, tone, output type, or existing copy. None are required.
 
 For a terse expert response, start with **`Direct mode:`** or **`Just the copy:`**. The skill still names the recommended technique, but skips exploratory advice unless you ask for it.
 
